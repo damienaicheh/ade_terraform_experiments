@@ -7,4 +7,4 @@ parameters:
   name: "location"
   description: "Location to deploy the environment resources. If not specified, will deploy to the region of the project"
   type: "string"
-runner: ghcr.io/damienaicheh/ade-extensibility-model-terraform:sha256-69b99636b540a7f89754f31d4f792f9e46deb3a7169c31691b4c889b093217d5
+runner: "ghcr.io/damienaicheh/ade-extensibility-model-terraform:sha256-69b99636b540a7f89754f31d4f792f9e46deb3a7169c31691b4c889b093217d5"
