@@ -3,17 +3,17 @@
 #   location = "West Europe"
 # }
 
-data "azurerm_resource_group" "rg" {
+data "azurerm_resource_group" "example" {
   name = var.resource_group_name
 }
 
 
 resource "azurerm_storage_account" "example" {
   name                     = "st123rfgdzad345"
-  resource_group_name      = azurerm_resource_group.example.name
-  location                 = azurerm_resource_group.example.location
+  resource_group_name      = data.azurerm_resource_group.example.name
+  location                 = data.azurerm_resource_group.example.location
   account_tier             = "Standard"
-  account_replication_type = "GRS"
+  account_replication_type = "LRS"
 
   tags = {
     environment = "staging"
